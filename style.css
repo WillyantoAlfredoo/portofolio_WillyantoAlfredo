@@ -277,6 +277,7 @@ body {
   letter-spacing: -3px;
   margin-bottom: 26px;
   transform: translateX(-170px);
+  color: #dff7ef;
 }
 
 .hero h1 span {
@@ -500,7 +501,7 @@ body {
 
 .quick-info {
   width: min(1180px, 90%);
-  margin: 0 auto 80px;
+  margin: 0 auto 35px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
@@ -709,4 +710,447 @@ body {
     display: block;
     min-height: auto;
   }
+
+}
+
+/* ================= ABOUT DETAIL ================= */
+
+#about-detail {
+  scroll-margin-top: 150px;
+}
+
+.about {
+  width: 100%;
+  margin: 0 0 100px;
+  padding: 10px 5% 40px;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* About Me tetap di tengah */
+.about-label-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.section-label {
+  width: fit-content;
+  padding: 11px 22px;
+  border-radius: 999px;
+  color: var(--soft);
+  background: rgba(45, 212, 191, 0.08);
+  border: 1px solid rgba(45, 212, 191, 0.35);
+  font-size: 17px;
+  font-weight: 900;
+  text-align: center;
+}
+
+/* Header About */
+.about-header {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 54px;
+  text-align: left;
+}
+
+.about-header h1 {
+  margin-bottom: 20px;
+  font-size: clamp(32px, 4vw, 50px);
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+  text-align: left;
+
+  color: transparent;
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--soft),
+    var(--secondary)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.about-header p {
+  max-width: 100%;
+  color: var(--text-muted);
+  font-size: 18px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* Layout utama dibuat mengikuti lebar layar */
+.about-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.45fr 0.85fr;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+
+.about-main,
+.about-card,
+.about-item,
+.about-tools {
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  background: rgba(255, 255, 255, 0.075);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+}
+
+.about-main {
+  min-width: 0;
+  padding: 34px;
+  border-radius: 30px;
+}
+
+.about-main h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.about-main p {
+  margin-bottom: 18px;
+  color: var(--text-muted);
+  line-height: 1.85;
+  font-size: 16px;
+}
+
+.about-main strong {
+  color: #ffffff;
+}
+
+.about-highlight {
+  margin-top: 26px;
+  padding: 22px;
+  border-radius: 24px;
+  background: rgba(45, 212, 191, 0.09);
+  border: 1px solid rgba(45, 212, 191, 0.18);
+}
+
+.about-highlight span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--soft);
+  font-weight: 900;
+}
+
+.about-highlight p {
+  margin-bottom: 0;
+}
+
+.about-side {
+  min-width: 0;
+  display: grid;
+  gap: 18px;
+}
+
+.about-card {
+  min-height: 200px;
+  padding: 26px;
+  border-radius: 26px;
+}
+
+.card-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-card h3 {
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+.about-card p {
+  margin-bottom: 8px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* 3 kotak bawah full mengikuti layar */
+.about-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 26px;
+}
+
+.about-item {
+  min-width: 0;
+  min-height: 260px;
+  padding: 28px;
+  border-radius: 26px;
+  transition: 0.25s ease;
+}
+
+.about-item:hover {
+  transform: translateY(-8px);
+  background: rgba(45, 212, 191, 0.09);
+  border-color: rgba(45, 212, 191, 0.24);
+}
+
+.about-item span {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 18px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #06130f;
+  background: linear-gradient(135deg, var(--soft), var(--primary), var(--secondary));
+  font-weight: 900;
+}
+
+.about-item h3 {
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.about-item p {
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* Tools dibuat full sejajar dengan card lain */
+.about-tools {
+  width: 100%;
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.about-tools h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tool-list span {
+  padding: 11px 15px;
+  border-radius: 999px;
+  color: #ecfeff;
+  background: rgba(45, 212, 191, 0.09);
+  border: 1px solid rgba(45, 212, 191, 0.16);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* ================= ABOUT RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  #about-detail {
+    scroll-margin-top: 170px;
+  }
+
+  .about {
+    padding: 30px 5% 40px;
+  }
+
+  .about-header {
+    max-width: 100%;
+  }
+
+  .about-wrapper,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-main,
+  .about-card,
+  .about-item,
+  .about-tools {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 520px) {
+  #about-detail {
+    scroll-margin-top: 185px;
+  }
+
+  .about {
+    padding: 24px 4% 40px;
+  }
+
+  .section-label {
+    font-size: 15px;
+    padding: 10px 18px;
+  }
+
+  .about-header h1 {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .about-header p {
+    font-size: 16px;
+  }
+
+  .about-main,
+  .about-card,
+  .about-item,
+  .about-tools {
+    padding: 24px;
+  }
+
+  .about-item {
+    min-height: auto;
+  }
+}
+
+/* ================= ABOUT CARD IMPROVEMENT ================= */
+
+/* Semua card diberi transisi halus */
+.about-main,
+.about-card,
+.about-item,
+.about-tools {
+  position: relative;
+  overflow: hidden;
+  transition: 
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease,
+    background 0.28s ease;
+}
+
+/* Efek cahaya tipis di dalam card */
+.about-main::before,
+.about-card::before,
+.about-item::before,
+.about-tools::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(45, 212, 191, 0.12),
+    transparent 34%,
+    rgba(217, 249, 157, 0.06)
+  );
+  opacity: 0.75;
+}
+
+/* Supaya teks tetap di atas efek */
+.about-main > *,
+.about-card > *,
+.about-item > *,
+.about-tools > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Card utama dibuat sedikit lebih kuat */
+.about-main {
+  background:
+    radial-gradient(circle at top left, rgba(45, 212, 191, 0.12), transparent 34%),
+    rgba(255, 255, 255, 0.075);
+  border-color: rgba(45, 212, 191, 0.2);
+}
+
+/* Education card */
+.about-side .about-card:nth-child(1) {
+  background:
+    radial-gradient(circle at top right, rgba(45, 212, 191, 0.13), transparent 36%),
+    rgba(255, 255, 255, 0.075);
+}
+
+/* Location card */
+.about-side .about-card:nth-child(2) {
+  background:
+    radial-gradient(circle at bottom right, rgba(245, 158, 11, 0.11), transparent 38%),
+    rgba(255, 255, 255, 0.075);
+}
+
+/* Tiga kotak bawah dibuat beda sedikit, tetap senada */
+.about-item:nth-child(1) {
+  background:
+    radial-gradient(circle at top left, rgba(45, 212, 191, 0.12), transparent 36%),
+    rgba(255, 255, 255, 0.075);
+}
+
+.about-item:nth-child(2) {
+  background:
+    radial-gradient(circle at top left, rgba(217, 249, 157, 0.11), transparent 36%),
+    rgba(255, 255, 255, 0.075);
+}
+
+.about-item:nth-child(3) {
+  background:
+    radial-gradient(circle at top left, rgba(245, 158, 11, 0.1), transparent 36%),
+    rgba(255, 255, 255, 0.075);
+}
+
+/* Hover card lebih hidup */
+.about-main:hover,
+.about-card:hover,
+.about-item:hover,
+.about-tools:hover {
+  transform: translateY(-7px);
+  border-color: rgba(45, 212, 191, 0.34);
+  box-shadow:
+    0 26px 70px rgba(0, 0, 0, 0.28),
+    0 0 35px rgba(45, 212, 191, 0.08);
+}
+
+/* Nomor 01, 02, 03 dibuat lebih premium */
+.about-item span {
+  box-shadow:
+    0 12px 28px rgba(45, 212, 191, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+/* Card title diberi aksen kecil */
+.about-main h2,
+.about-card h3,
+.about-item h3,
+.about-tools h2 {
+  letter-spacing: -0.5px;
+}
+
+/* Highlight current focus dibuat lebih menyatu */
+.about-highlight {
+  background:
+    linear-gradient(135deg, rgba(45, 212, 191, 0.11), rgba(217, 249, 157, 0.06));
+  border-color: rgba(45, 212, 191, 0.22);
+}
+
+/* Tools card lebih menarik tapi tetap warna sama */
+.about-tools {
+  background:
+    radial-gradient(circle at top left, rgba(45, 212, 191, 0.11), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(217, 249, 157, 0.08), transparent 40%),
+    rgba(255, 255, 255, 0.075);
+}
+
+/* Skill chips lebih interaktif */
+.tool-list span {
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.tool-list span:hover {
+  color: #06130f;
+  background: linear-gradient(135deg, var(--soft), var(--primary));
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(45, 212, 191, 0.18);
 }
